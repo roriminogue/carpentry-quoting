@@ -19,6 +19,42 @@ export const business = {
   enquiryUrl: '',
 };
 
+// The four services shown with a big photo each. `photo` is the file name in public/photos/.
+export const services = [
+  {
+    title: 'Decks',
+    photo: 'decks',
+    timber: '#6b3a24',
+    body: 'New hardwood decks built on a proper frame, and tired old decks re-boarded and brought back. Merbau, spotted gum, blackbutt, treated pine or composite.',
+    includes: ['Footings, bearers and joists to Australian standards', 'Stairs and balustrades', 'Sand, oil and finish'],
+    from: 'From $330 per m², built and oiled',
+  },
+  {
+    title: 'Pergolas and outdoor',
+    photo: 'outdoor',
+    timber: '#8f7457',
+    body: 'Timber pergolas over the deck or the courtyard, gates that close properly, and fence repairs that last.',
+    includes: ['Freestanding or attached pergolas', 'Timber gates, built and hung', 'Fence posts, rails and palings'],
+    from: 'Pergolas from $132 per m², labour',
+  },
+  {
+    title: 'Doors and trims',
+    photo: 'doors',
+    timber: '#bd9a74',
+    body: 'Doors that stick, swing or will not latch, fixed or replaced. New architraves and skirting to finish the room off.',
+    includes: ['Internal and external doors hung', 'Locks and handles fitted', 'Architraves and skirting'],
+    from: 'From $176 per door',
+  },
+  {
+    title: 'Renovations and repairs',
+    photo: 'renovations',
+    timber: '#a8925e',
+    body: 'The carpentry in a small renovation: new stud walls, built-in shelving, and the repair jobs that keep getting put off.',
+    includes: ['Non-structural stud walls', 'Built-in shelving and storage', 'Repairs and odd jobs'],
+    from: '$99 an hour, two-hour minimum',
+  },
+];
+
 // The printed price sheet on the website. Prices include GST and are "from" prices.
 // Keep them in line with quoting/price-list.csv (those are ex GST: multiply by 1.1).
 export const priceSheet = [

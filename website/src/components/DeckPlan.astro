@@ -39,8 +39,9 @@ for (let y = 0; y < H; y += board + gap) {
   class="deck-plan"
   viewBox={`0 0 ${W} ${H}`}
   preserveAspectRatio="xMidYMid slice"
-  role="img"
-  aria-label={label}
+  role={label ? 'img' : undefined}
+  aria-label={label || undefined}
+  aria-hidden={label ? undefined : 'true'}
 >
   <rect width={W} height={H} class="deck-gap" />
   {pieces.map((p) => (

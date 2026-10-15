@@ -1,0 +1,37 @@
+---
+// A job photo. Drop the real photo into website/public/photos/<name>.jpg and it is used
+// automatically. Until then, a drawing of timber boards stands in, marked as a placeholder.
+import fs from 'node:fs';
+import path from 'node:path';
+import DeckPlan from './DeckPlan.astro';
+
+interface Props {
+  name: string; // file name without extension, e.g. 'hero'
+  alt: string; // describe the real photo
+  timber?: string; // board colour for the stand-in
+  turn?: boolean; // run the stand-in boards vertically
+  eager?: boolean; // load straight away (the hero only)
+  class?: string;
+}
+const { name, alt, timber = '#6b3a24', turn = false, eager = false, class: cls = '' } = Astro.props;
+
+const file = ['jpg', 'jpeg', 'webp', 'png']
+  .map((ext) => `${name}.${ext}`)
+  .find((f) => fs.existsSync(path.join(process.cwd(), 'public', 'photos', f)));
+---
+{file ? (
+  <img
+    class={`photo ${cls}`}
+    src={`/photos/${file}`}
+    alt={alt}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+    width="1600"
+    height="1200"
+  />
+) : (
+  <div class={`photo photo-standin ${turn ? 'turn' : ''} ${cls}`} style={`--timber:${timber}`} role="img" aria-label={alt}>
+    <DeckPlan label="" />
+    <span class="photo-note">Job photo goes here: photos/{name}.jpg</span>
+  </div>
+)}

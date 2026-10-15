@@ -1,0 +1,26 @@
+Code,Name,Description,Unit,Price (ex GST),Cost (ex GST),Category
+LAB-HR,Carpentry labour,Licensed carpenter per hour,hour,90,,Labour
+LAB-DAY,Carpentry labour - day rate,8 hours on site,day,680,,Labour
+MIN-CHG,Minimum charge,Covers travel and the first 2 hours on site,each,180,,Labour
+QUOTE-VISIT,Measure and quote visit,Free within service area; charged only for out-of-area or design work,each,0,,Labour
+DOOR-HANG,Hang door (door supplied),Fit and hang one internal door into existing jamb; hinges and latch,each,160,,Doors & trims
+DOOR-PREHUNG,Install prehung door,Remove old door and frame; install prehung door set; does not include painting,each,280,,Doors & trims
+DOOR-EXT,Hang external door,Hang solid external door; fit hinges and latch; weather seal,each,320,,Doors & trims
+LOCKSET,Fit lockset or handle,Fit handle or lockset to existing door,each,60,,Doors & trims
+ARCH-SET,Architraves per door,Remove and replace architraves both sides of one door,each,90,,Doors & trims
+SKIRT,Skirting boards,Remove and replace skirting; labour only,lin m,18,,Doors & trims
+DECK-FRAME,Deck framing (labour),Set out; footings; bearers and joists to AS 1684; labour only,m2,95,,Decks
+DECK-BOARD,Deck boards (labour),Lay and fix boards; trim edges; labour only,m2,55,,Decks
+DECK-REBOARD,Re-board deck (labour),Remove old boards; check and repair frame; lay new boards; labour only,m2,80,,Decks
+DECK-OIL,Sand and oil deck,Sand and two coats deck oil; includes oil,m2,30,,Decks
+DECK-STEP,Deck stairs per step,Build stair stringers and treads; labour only,step,150,,Decks
+BALUSTRADE,Balustrade (labour),Timber posts; rails and balusters to code; labour only,lin m,180,,Decks
+PERGOLA,Pergola (labour),Freestanding or attached timber pergola frame; labour only,m2,120,,Outdoor
+GATE,Build and hang timber gate,Gate frame; cladding; hinges and latch; labour only,each,450,,Outdoor
+FENCE-REPAIR,Fence repair,Replace posts; rails or palings; hourly plus materials,hour,90,,Outdoor
+SHELVING,Built-in shelving,Fit timber or melamine shelving; labour only,lin m,90,,Interior
+WALL-FRAME,Stud wall framing,Frame new non-structural stud wall; labour only,lin m,110,,Interior
+MATERIALS,Materials (supplier cost + margin),Timber; fixings and hardware at supplier price plus 15% handling,each,0,,Materials
+WASTE,Rubbish removal,Remove and dispose of old materials and site waste,each,250,,Site
+SKIP,Skip bin,Hire of skip bin; price varies by size and council,each,450,,Site
+VARIATION,Variation,Extra work agreed in writing during the job,each,0,,Other

@@ -27,7 +27,7 @@ const steps = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -48,7 +48,7 @@ const steps = [
       <section class="hero" id="top" aria-labelledby="hero-h">
         <Photo name="hero" alt="A finished hardwood deck at the back of a Sydney house" timber="#5a2f1c" eager class="hero-photo" />
         <div class="hero-content">
-          <h1 id="hero-h" class="display">Built to last.</h1>
+          <h1 id="hero-h" class="display">Built to Last.</h1>
           <p class="hero-line">
             Hardwood decks, pergolas and carpentry across {business.area}, from one licensed carpenter.
           </p>
@@ -76,7 +76,7 @@ const steps = [
       </section>
 
       <section id="services" class="services" aria-labelledby="services-h">
-        <h2 id="services-h" class="display section-title">What I build</h2>
+        <h2 id="services-h" class="display section-title">What I Build</h2>
         {services.map((s, i) => (
           <article class={`service ${i % 2 ? 'flip' : ''}`}>
             <Photo name={s.photo} alt={`${s.title}: a recent job`} timber={s.timber} turn={i % 2 === 1} class="service-photo" />
@@ -95,7 +95,7 @@ const steps = [
 
       <section id="price" class="price" aria-labelledby="price-h">
         <div class="price-head" data-reveal>
-          <h2 id="price-h" class="display section-title">Price your deck</h2>
+          <h2 id="price-h" class="display section-title">Price Your Deck</h2>
           <p>A ballpark in a minute. The real price comes after a free measure-up, fixed and in writing.</p>
         </div>
         <div class="price-body">
@@ -154,7 +154,7 @@ const steps = [
       </section>
 
       <section class="process" aria-labelledby="process-h">
-        <h2 id="process-h" class="display section-title">How it works</h2>
+        <h2 id="process-h" class="display section-title">How It Works</h2>
         <ol>
           {steps.map((s) => (
             <li data-reveal>
@@ -184,7 +184,7 @@ const steps = [
 
       <section class="prices" aria-labelledby="prices-h">
         <div class="prices-head" data-reveal>
-          <h2 id="prices-h" class="display section-title">Price list</h2>
+          <h2 id="prices-h" class="display section-title">Price List</h2>
           <p>Starting prices, including GST. {hours[1]}.</p>
         </div>
         <div class="price-groups">
@@ -203,7 +203,7 @@ const steps = [
 
       <section id="contact" class="contact" aria-labelledby="contact-h">
         <div class="contact-head" data-reveal>
-          <h2 id="contact-h" class="display">Let's build it.</h2>
+          <h2 id="contact-h" class="display">Let's Build It.</h2>
           <p>Send the details and I'll call you within one business day to book a free measure-up.</p>
           <p class="direct">
             <a href={telHref}>{business.phone}</a>
@@ -323,7 +323,7 @@ const steps = [
 
 <style is:global>
   /* Rugged premium: near-black like a charred post, warm bone text, one oiled-timber amber
-     for actions. Heavy condensed capitals for headlines, full-bleed job photos carry the page. */
+     for actions. Large, tightly set Instrument Sans in title case; full-bleed job photos carry the page. */
   :root {
     --bg: #121110;
     --surface: #1b1917;
@@ -335,12 +335,12 @@ const steps = [
     --accent-ink: #121110;
     --light: #ebe8e4;
 
-    --face: 'Archivo', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+    --face: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
     --step-small: 0.875rem;
     --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
     --step-lead: clamp(1.375rem, 1.1rem + 0.9vw, 2rem);
     --step-head: clamp(2.5rem, 1.6rem + 4vw, 5.5rem);
-    --step-hero: clamp(4rem, 1rem + 12vw, 11.5rem);
+    --step-hero: clamp(3.5rem, 1rem + 10vw, 10rem);
 
     --side: max(20px, env(safe-area-inset-left, 0px));
     --side-r: max(20px, env(safe-area-inset-right, 0px));
@@ -362,8 +362,8 @@ const steps = [
   .skip:focus { top: 12px; }
 
   .display {
-    font-weight: 800; font-stretch: 72%; text-transform: uppercase;
-    letter-spacing: -0.01em; line-height: 0.88; text-wrap: balance;
+    font-weight: 500;
+    letter-spacing: -0.045em; line-height: 0.95; text-wrap: balance;
   }
   .section-title { font-size: var(--step-head); }
 
@@ -403,7 +403,7 @@ const steps = [
     transition: background-color 240ms ease;
   }
   .nav.solid { background: var(--bg); }
-  .wordmark { font-weight: 800; font-stretch: 80%; text-transform: uppercase; font-size: var(--step-body); text-decoration: none; letter-spacing: 0; margin-right: auto; }
+  .wordmark { font-weight: 600; font-size: var(--step-body); text-decoration: none; letter-spacing: -0.02em; margin-right: auto; }
   .nav nav { display: flex; gap: 24px; font-size: var(--step-small); font-weight: 600; }
   .nav nav a { text-decoration: none; }
   .nav nav a:hover { color: var(--accent); }
@@ -425,7 +425,7 @@ const steps = [
   .intro { padding: 180px var(--side-r) 0 var(--side); display: grid; gap: 96px; }
   .statement { font-size: var(--step-lead); line-height: 1.2; font-weight: 600; letter-spacing: -0.015em; max-width: 34ch; }
   .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-  .facts dt { font-size: var(--step-head); font-weight: 800; font-stretch: 72%; line-height: 0.9; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .facts dt { font-size: var(--step-head); font-weight: 500; letter-spacing: -0.045em; line-height: 0.95; color: var(--accent); font-variant-numeric: tabular-nums; }
   .facts dd { margin-top: 12px; max-width: 26ch; color: var(--muted); }
 
   /* Services: big photo beside text, alternating */
@@ -467,7 +467,7 @@ const steps = [
 
   .result { background: var(--surface-2); padding: 48px clamp(24px, 4vw, 56px); display: grid; gap: 22px; align-content: start; }
   .result-label { color: var(--muted); font-weight: 600; }
-  .result-total { font-size: var(--step-head); font-weight: 800; font-stretch: 75%; line-height: 0.95; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .result-total { font-size: var(--step-head); font-weight: 500; letter-spacing: -0.045em; line-height: 0.95; color: var(--accent); font-variant-numeric: tabular-nums; }
   .result-timber { font-size: var(--step-lead); line-height: 1.3; max-width: 34ch; }
   .lines { list-style: none; margin: 0; padding: 22px 0 0; display: grid; gap: 12px; }
   .lines li { display: flex; justify-content: space-between; gap: 24px; }
@@ -479,7 +479,7 @@ const steps = [
   .process { padding: 200px var(--side-r) 0 var(--side); }
   .process ol { list-style: none; margin: 64px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .process li { background: var(--surface); padding: 32px 28px 40px; display: grid; gap: 14px; align-content: start; }
-  .process h3 { font-size: var(--step-lead); font-weight: 800; font-stretch: 80%; text-transform: uppercase; line-height: 1; }
+  .process h3 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; }
   .process p { color: var(--muted); }
 
   /* About */
@@ -494,7 +494,7 @@ const steps = [
   .prices-head { display: grid; gap: 16px; margin-bottom: 56px; }
   .prices-head p { color: var(--muted); }
   .price-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
-  .group h3 { font-size: var(--step-lead); font-weight: 800; font-stretch: 80%; text-transform: uppercase; margin-bottom: 18px; }
+  .group h3 { font-size: var(--step-lead); font-weight: 500; letter-spacing: -0.02em; margin-bottom: 18px; }
   .group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
   .group li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 14px; background: var(--surface); }
   .amt { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--accent); font-weight: 600; }

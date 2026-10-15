@@ -30,7 +30,7 @@ export const services = [
     from: 'From $330 per m², built and oiled',
   },
   {
-    title: 'Pergolas and outdoor',
+    title: 'Pergolas and Outdoor',
     photo: 'outdoor',
     timber: '#8f7457',
     body: 'Timber pergolas over the deck or the courtyard, gates that close properly, and fence repairs that last.',
@@ -38,7 +38,7 @@ export const services = [
     from: 'Pergolas from $132 per m², labour',
   },
   {
-    title: 'Doors and trims',
+    title: 'Doors and Trims',
     photo: 'doors',
     timber: '#bd9a74',
     body: 'Doors that stick, swing or will not latch, fixed or replaced. New architraves and skirting to finish the room off.',
@@ -46,7 +46,7 @@ export const services = [
     from: 'From $176 per door',
   },
   {
-    title: 'Renovations and repairs',
+    title: 'Renovations and Repairs',
     photo: 'renovations',
     timber: '#a8925e',
     body: 'The carpentry in a small renovation: new stud walls, built-in shelving, and the repair jobs that keep getting put off.',

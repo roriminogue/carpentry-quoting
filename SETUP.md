@@ -78,6 +78,10 @@ You have to follow these whatever software you use. The calculator flags them au
 
 Sources: [NSW Gov contracts](https://www.nsw.gov.au/housing-and-construction/building-or-renovating-a-home/preparing/contracts), [icare HBCF](https://icare.nsw.gov.au/government-agencies/our-funds-and-schemes/home-building-compensation-fund), [SIRA insurance obligations](https://www.sira.nsw.gov.au/resources-library/home-building-compensation-resources/publications/insurance-obligations-for-residential-building-work). This is a summary, not legal advice. Check with NSW Fair Trading or HIA/MBA if a job is borderline.
 
+## 4b. AI quote writer (optional, 10 minutes)
+
+Set up the Claude project in `quoting/ai-quote-writer/HOW-TO-USE.md`. After each measure-up, dictate the job on your phone and Claude drafts the quote (job description, line items, total, flags and a customer message) for you to check and paste into ServiceM8.
+
 ## 5. Test it end to end
 
 1. Fill in the online enquiry form as if you were a client (use a friend's phone number).

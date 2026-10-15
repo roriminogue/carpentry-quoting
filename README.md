@@ -10,7 +10,7 @@ Website "Request a quote" ──► ServiceM8 Online Enquiry ──► new job i
                                                              ▼
                                                     measure-up booked
                                                              │
-                     quote-calculator.xlsx ──► price ──► quote from a job template
+        voice note ──► AI quote writer (or quote-calculator.xlsx) ──► quote from a job template
                                                              │  follow-ups at day 2 / 7 / 25 (automatic)
                                                              ▼
                                             client accepts online + 10% deposit
@@ -29,6 +29,7 @@ Website "Request a quote" ──► ServiceM8 Online Enquiry ──► new job i
 | [`quoting/quote-calculator.xlsx`](quoting/quote-calculator.xlsx) | Deck and general job calculator with NSW contract/insurance warnings (opens in Excel or Numbers on iPhone) |
 | [`quoting/quote-templates.md`](quoting/quote-templates.md) | Quote terms and job templates (deck, re-board, doors, general) |
 | [`quoting/messages.md`](quoting/messages.md) | Auto-reply, follow-up, expiry and review-request messages |
+| [`quoting/ai-quote-writer/`](quoting/ai-quote-writer/HOW-TO-USE.md) | AI quote writer: talk through a measure-up on your phone, Claude drafts the quote, you check it and paste it into ServiceM8 |
 | [`website/`](website/) | One-page website with a deck price estimator and quote buttons |
 
 ## Before using

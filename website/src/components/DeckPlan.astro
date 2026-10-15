@@ -1,0 +1,53 @@
+---
+// A plan-view drawing of decking: 140 mm boards with 5 mm gaps, butt joins staggered
+// over joists at 450 mm centres, two screws per board at every joist. Drawn to scale
+// (1 unit = 10 mm). The board colour comes from the CSS variable --timber.
+interface Props {
+  widthMm?: number;
+  lengthMm?: number;
+  label?: string;
+}
+const { widthMm = 3600, lengthMm = 4500, label = 'Plan of hardwood decking' } = Astro.props;
+
+const W = widthMm / 10;
+const H = lengthMm / 10;
+const board = 14;
+const gap = 0.5;
+const joist = 45;
+
+// Small deterministic random so every build draws the same deck.
+let seed = 7;
+const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+
+type Piece = { x: number; y: number; w: number; tone: number };
+const pieces: Piece[] = [];
+const screws: { x: number; y: number }[] = [];
+for (let y = 0; y < H; y += board + gap) {
+  let x = 0;
+  while (x < W) {
+    // Board lengths of 2.7 to 5.4 m, cut to finish on a joist.
+    const len = Math.min(W - x, Math.round((270 + rand() * 270) / joist) * joist);
+    pieces.push({ x, y, w: len - gap, tone: rand() });
+    x += len;
+  }
+  for (let jx = joist / 2; jx < W; jx += joist) {
+    screws.push({ x: jx, y: y + 3.5 }, { x: jx, y: y + board - 3.5 });
+  }
+}
+---
+<svg
+  class="deck-plan"
+  viewBox={`0 0 ${W} ${H}`}
+  preserveAspectRatio="xMidYMid slice"
+  role="img"
+  aria-label={label}
+>
+  <rect width={W} height={H} class="deck-gap" />
+  {pieces.map((p) => (
+    <g>
+      <rect x={p.x} y={p.y} width={p.w} height={board} class="deck-board" />
+      <rect x={p.x} y={p.y} width={p.w} height={board} class="deck-tone" style={`opacity:${(p.tone * 0.3).toFixed(3)}`} />
+    </g>
+  ))}
+  {screws.map((s) => <circle cx={s.x} cy={s.y} r="0.55" class="deck-screw" />)}
+</svg>
